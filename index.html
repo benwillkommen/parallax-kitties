@@ -21,6 +21,13 @@
     body {
         font-family: sans-serif;
     }
+    .slide-content {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding-top: 200px;
+    }
     .slide {
         position: fixed;
         top: 0;
@@ -30,31 +37,21 @@
         background: transparent center no-repeat;
         background-size: cover;
     }
-    #slide1 {
-        
+    .slide-content span {
+        font-size: 30px;
     }
-    #slide2 {
+    #slide1 {} #slide2 {
         overflow: hidden;
         background-image: url(http://placekitten.com/800/600?image=1);
     }
+    #slide2 .slide-content span {
+        color: white;
+    }
     #slide3 {
         background-image: url(http://placekitten.com/800/600?image=3);
-        overflow:hidden;
+        overflow: hidden;
     }
-    #slide4 {
-        background-image: url(http://placekitten.com/800/600?image=4);
-    }
-    .slide-content {
-        position: absolute;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        padding-top: 200px;
-    }
-    p {
-        margin: 1em 0;
-    }
-    .entry-header .inner {
+    #slide4 {} .entry-header .inner {
         text-align: center;
         margin: 0 auto 0 auto;
         width: 800px;
@@ -93,6 +90,17 @@
         /*background: url(polina.jpg) no-repeat;*/
         background-size: cover;
     }
+    .fifty {
+        width: 49%;
+        height: 100%;
+        display: inline-block;
+        float:left;
+        text-align:center;
+    }
+    .kittyZoom {
+        background-image: url(http://placekitten.com/800/600?image=4);
+        background-repeat: no-repeat;
+    }
     </style>
 </head>
 
@@ -112,14 +120,40 @@
 
     <div id="slide2" class="slide" data-0="transform:translate(0,100%);" data-100p="transform:translate(0,0%)" data-500p="" data-600p="transform:translate(0,-100%)">
         <div class="slide-content">
-            <span data-100p="opacity:0;" data-200p="opacity:1;">Consequat numquam ipsa in nostrum sequi.</span>
-            <span>Vitae odit and quia nostrum laudantium, modi. Do nequeporro dolores, sequi.</span>
-            <span>Accusantium nihil for illum enim eos consequatur.</span>
+            <span data-100p="opacity:0;" data-150p="opacity:1;">Consequat numquam ipsa in nostrum sequi.</span>
+            <br/>
+            <span data-200p="opacity:0;" data-250p="opacity:1;">Vitae odit and quia nostrum laudantium, modi. Do nequeporro dolores, sequi.</span>
+            <br/>
+            <span data-300p="opacity:0;" data-350p="opacity:1;">Accusantium nihil for illum enim eos consequatur.</span>
         </div>
     </div>
-
-    <div id="slide3" class="slide" data-500p="transform:translate(0,100%);" data-600p="transform:translate(0,0%);" data-1100p="" data-1200p="transform:translate(0,-100%)"></div>
-	<div id="slide4" class="slide" data-1100p="transform:translate(0,100%);" data-1200p="transform:translate(0,0%);"></div>
+    <div id="slide3" class="slide" data-500p="transform:translate(0,100%);" data-600p="transform:translate(0,0%);" data-1100p="" data-1200p="transform:translate(0,-100%)">
+        <div class="slide-content">
+            <span data-600p="opacity:0;" data-650p="opacity:1;">Consequat numquam ipsa in nostrum sequi.</span>
+            <br/>
+            <span data-700p="opacity:0;" data-750p="opacity:1;">Vitae odit and quia nostrum laudantium, modi. Do nequeporro dolores, sequi.</span>
+            <br/>
+            <span data-800p="opacity:0;" data-850p="opacity:1;">Accusantium nihil for illum enim eos consequatur.</span>
+        </div>
+    </div>
+    <div id="slide4" class="slide" data-1100p="transform:translate(0,100%);" data-1200p="transform:translate(0,0%);">
+        <div class="slide-content">
+            <div class="fifty" data-1500p="opacity:0;" data-1550p="opacity:1">
+            	<br/>
+            	<br/>
+            	<br/>
+            	<br/>
+            	<br/>
+            	<br/>
+            	<br/>
+            	<span >meow.</span><br/>
+            	<span>=^..^=</span>
+            </div>
+            <div class="fifty kittyZoom" 
+            data-1200p="background-size: 100%;background-position-x: 0px;background-position-y: 0px;"
+            data-1500p="background-size: 500%;background-position-x: -1420px;background-position-y: -860px;"></div>
+        </div>
+    </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
